@@ -19,7 +19,7 @@ def main():
         if api_key and content:
             client = anthropic.Anthropic(api_key=api_key)
             message = client.messages.create(
-                model="claude-3-opus-20240229",
+                model="claude-3-sonnet",
                 max_tokens=1000,
                 temperature=0,
                 messages=[
