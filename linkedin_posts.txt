@@ -1,0 +1,321 @@
+### Post 1 
+
+Generate quizzes in Indian Languages with AI! 
+
+AI will revolutionize education.
+
+AI will improve accessibility in education.
+
+AI will help you learn faster.
+
+But how?
+
+I strongly believe AI will change the education sector as we know it, and this was the primary reason I quit my job to pursue Generative AI.
+
+While AI has huge potential to disrupt education, I don't find many AI integrations in mainstream education.
+
+I created 'Educhain' with the primary aim of making it easy to integrate the use of Gen AI in education.
+
+I have created a Telugu Quiz generator in <10 lines of code using the Educhain library. This tool demonstrates the power of AI in generating quizzes effortlessly, making it easier for educators to create assessments in regional languages.
+
+For teachers/educators in my network who want to experiment with this tool, please DM me!
+
+P.S. The code is fully open source. You can find the link in the comments. You will also find a guide to generate questions in other Indian languages.
+
+------------------------------------------
+### Post 2
+
+What is the best way to get started with Generative AI?
+
+Here's what I learned from conducting workshops for 5000+ people on Generative AI:
+
+1️⃣ Avoid Beginner Mistakes
+
+If you lack a strong technical background, refrain from diving into research papers like "Attention Is All You Need". Instead, focus on building intuition through practical experience and beginner-friendly resources.
+
+2️⃣ Work Backwards
+
+Start by creating simple AI applications, gradually developing a deeper understanding of the underlying principles. This hands-on approach will help you connect the dots between theory and practice.
+
+3️⃣ Don't Just Learn, Build!
+
+Theory and courses alone won't suffice. To truly grasp Generative AI, you must get your hands dirty and actively build projects.
+
+At Build Fast with AI, we have crafted a 4-week long Crash Course on Generative AI, focusing on a learning-by-doing approach. Every lecture is centered around building AI apps from scratch.
+
+The next cohort starts on May 25th! 
+
+We have very limited seats left! Register now: https://lnkd.in/grNgi6n3
+------------------------------------------
+### Post 3
+
+Super happy to have conducted Build Fast with AI's first offline session, and that too at Google!
+
+Almost 1 year ago, I began creating AI apps and sharing them on LinkedIn. These posts gained traction and led me to organize my first workshop for a small group of enthusiasts.
+
+Little did I know that Build Fast with AI would collaborate with Google to help people leverage Generative AI.
+
+In today's event, we had around 100 developers where we talked about Google AI Studio, creating AI apps in <10 minutes, multimodal chatbots, and so on! 
+
+Reflecting on my journey so far - It took a lot of work to get here, but I enjoy every moment of it, and I feel this is just the beginning of something big!
+
+Hoping to continue on the path of learning, educating, and building with AI! 
+
+------- 
+
+At Build Fast with AI, we have designed a 4-week crash course on Generative AI, and the next cohort starts on 25th May.
+
+We have limited seats left! Register now: https://lnkd.in/gFZ8rrPA
+
+hashtag#BuildFastwithAI hashtag#GoogleForDevelopers hashtag#GenAI hashtag#CrashCourse
+------------------------------------------
+### Post 4
+
+ChatGPT can now see, hear, and speak! 
+
+OpenAI had a major product announcement yesterday! They released a new flagship model called GPT-4o and surprising updates to ChatGPT.
+
+About GPT-4o:
+
+〰 Omnimodel: Voice, text, and vision are baked in natively. This means it can interact across modalities (text, vision, audio) without using separate models for speech-to-text and text-to-text.
+
+〰 Performance: GPT-4o beats GPT-4 Turbo, Claude 3 Opus, Gemini 1.5 Pro on almost all metrics. 
+
+〰 Cost: Remarkably, GPT-4o is 50% cheaper than its predecessor, GPT-4 Turbo.
+
+〰 Speed: It's 2 times faster, and the rate limits have been increased by 5 times.
+
+〰 Support: GPT-4o supports 50 languages, including Indian languages like Hindi, Telugu, Tamil, etc
+
+Updates to ChatGPT:
+
+〰 Free Upgrade: GPT-4o will now be available for free on ChatGPT. GPT Store and Code Interpreter will also be accessible without ChatGPT plus. 
+
+〰 Desktop App: Users will also be able to download the new ChatGPT app. 
+
+〰 Realtime Multimodal Interaction: GPT-4o can handle voice, text, and vision simultaneously.
+
+Just when you think OpenAI is stagnating, they always have a trick up their sleeve.
+
+We are slowly moving towards a truly multimodal model. Standalone text-to-text models will soon be a thing of the past.
+
+Google I/O is happening today. I'm eagerly waiting to see what they have in store.
+
+------------------------------------------
+### Post 5
+
+Will AI kill coding jobs?
+
+There has been a lot of discussion around AI making coding obsolete.
+
+As someone who writes code every day and heavily works in the Gen AI space, here's my take on this:
+
+The answer is a resounding NO.
+
+Let's say you have an idea to build something. Before Gen AI, going from idea to implementation would take a few weeks to months.
+
+It would involve steps like creating an initial roadmap, setting up the codebase, and going through hundreds of Stack Overflow pages to resolve errors.
+
+Basically, as a developer, you would spend a lot of time setting up the stage rather than focusing on the task itself.
+
+With Gen AI, you can decrease the time from idea to implementation by a whopping 10-100X.
+
+On a personal note, at least 70% of the code I write daily is AI-generated. I have created apps in a matter of a few hours as opposed to weeks.
+
+Learning to code + using Gen AI is the skill combo with the highest ROI.
+
+Unpopular opinion: This is the best time to learn to code! 
+—-
+
+So, how can you leverage Gen AI?
+
+Join the waitlist for our 4-week Crash Course at https://lnkd.in/gFZ8rrPA
+
+------------------------------------------
+### Post 6
+
+India has less than 2,000 senior engineers who can build core AI products.
+
+This should scare you!
+
+We only have a few thousand AI engineers for a country of 1.4 billion people!
+
+Why is it important to build core AI products within India?
+
+A few months back, I created a recipe generator app using a vision model (Llava model). The model worked well when I uploaded images of Western food, but it failed to recognize Gulab Jamun or other popular Indian dishes.
+
+And this is not a one-off example; the issue is the same with all types of models.
+
+Most popular LLMs like Llama or Mistral are terribly bad at Indian languages.
+
+Widely available audio models or voice cloning are generally very bad at Indian accents.
+
+The reason for this is that most popular Gen AI models are being trained in the US, China, or Europe.
+
+These models are not sufficiently trained on Indian data or context (and most companies don't have an incentive to do so).
+
+Given the diversity of our country, we would require the highest concentration of AI engineers, but we have the lowest!
+
+We produce the highest number of engineering graduates, and yet not even a minute fraction of them are capable.
+
+While I don’t have a solution, I am doing my part by educating people about Generative AI through Build Fast with AI
+
+A huge part of our workshops and events we organise are completely free. Check them out here: https://lnkd.in/gPMWdU4w
+
+Have some ideas on how we can upskill India in Generative AI? Let’s chat!
+
+
+------------------------------------------
+
+### Post 7
+
+🦙 We organized a session on Llama 3 yesterday!
+
+It was inspiring to see people from diverse backgrounds eager to learn about Generative AI.
+
+Here are some interesting facts from the polls I conducted during the session:
+
+1️⃣ 60% of attendees were working professionals with more than 5 years of experience.
+
+2️⃣ 70% of attendees had never heard of or used Llama models before.
+
+3️⃣ 40% of attendees didn't have any coding experience.
+
+One metric that I'm particularly proud of is the retention rate: 80% of the people who joined the session were still engaged and present until the end, as captured in this photo.
+
+You can watch the full recording on our website for free: https://lnkd.in/gzvfbJcD
+
+---------------------------------------------
+
+### Post 8
+
+Build Fast with AI x Google for Developers
+
+Exactly one year ago, I published my first Generative AI app just out of excitement. 
+
+This kicked off my journey into the world of GenAI. Since then, I have developed over 50 apps, launched a course on GenAI, and did consulting for more than 10 companies.
+
+But today, I want to make the most exciting announcement of my journey so far!
+
+Build Fast with AI is collaborating with Google for Developers to help more developers leverage Generative AI! We are organizing an offline event, "Build with Generative AI," on May 19th at Google's office in Bangalore.
+
+The event will focus on providing hands-on experience with Gemini models and introducing you to cutting-edge AI technologies and tools offered by Google.
+
+This is an incredible opportunity to learn, grow, and connect with the AI community.
+
+We have very limited seats for the event. Please register here: https://lu.ma/fn1y1rof
+
+hashtag#BuildFastwithAI hashtag#GoogleforDevelopers hashtag#BuildwithGenAI
+
+----------------------------------------------
+
+### Post 9
+
+🚀 The gap between closed-source models and open-source models has never been closer.
+
+Thanks to the recent release of Llama 3 by Meta, this new model represents a significant step forward in open-source LLMs.
+
+Here are five key facts about the Llama 3 release:
+
+1️⃣ Two versions: Llama 3 offers 8B and 70B versions to cater to different needs and use cases.
+
+2️⃣ Massive training dataset: Trained on an enormous 15 trillion tokens, a 7x increase from Llama 2.
+
+3️⃣ Powerful and economical: The 70B model outperforms Claude-3-Sonnet and Gemini 1.5 Pro while being 20X cheaper!
+
+4️⃣ Future developments: Meta is working on a 400B model, expected later this year, which could outperform GPT-4 and Claude 3 Opus.
+
+5️⃣ Rapid adoption: Over 5000 finetuned versions of Llama 3 within two weeks of release, showcasing its popularity and versatility.
+
+But...
+
+How do you use these models? How can you create apps with them?
+
+Join my free 1-hour "Llama 3 - Deep Dive" workshop on Thursday to learn how to use Llama 3 and create apps with it.
+
+Register here: https://lnkd.in/gtP9Hbfd
+
+hashtag#Llama3 hashtag#MetaAI hashtag#FreeWorkshop hashtag#BuildFastwithAI
+
+
+----------------------------------------------
+
+### Post 10
+
+Generative AI is a survival skill!
+
+Generative AI is a technology that will impact every domain and job. You are missing out on a lot if you look at GenAI as just another technical skill to learn.
+
+I would categorize the benefits of Generative AI into two main areas:
+
+1️⃣ Personal Productivity
+
+〰 If you are a coder, you can use GenAI to code 10x faster
+
+〰 If you are a consultant, you can use GenAI to create presentations and reports in a fraction of the time
+
+〰 Whatever your role, GenAI can supercharge your personal productivity
+
+2️⃣ Staying Relevant in Your Job
+
+〰 It's very likely that your company will start integrating AI into its products - you need to know how to do this to stay valuable.
+
+〰 AI is already causing many job losses - learning GenAI can help protect your job and keep your skills in demand.
+
+🤔 So, what's the best way to start your GenAI journey?
+
+Ans: Crash Course on Generative AI by Build Fast with AI! 
+
+Join the waitlist for our course at https://lnkd.in/gFZ8rrPA
+
+----------------------------------------------
+
+### Post 11
+
+Love has no language, but how about learning your partner's mother tongue?
+
+Recently, a friend of mine decided to learn Telugu, her soon-to-be husband's native language. 
+
+However, she struggled to find reliable resources as popular language-learning apps like Duolingo don't support many Indian languages.
+
+In response, I developed a language-learning app that introduces a new sentence in Telugu daily, along with its meaning and nuanced explanations. 
+
+Building such applications is surprisingly simple; it took me only 30 minutes. 
+
+With our Crash Course of Generative AI, you too can learn to build apps like this.
+
+Join the waitlist for our course at https://lnkd.in/gFZ8rrPA
+
+hashtag#2States hashtag#CrashCourse hashtag#GenAI hashtag#BuildFastwithAI
+
+----------------------------------------------
+
+### Post 12
+
+🦙 Meta has just released Llama 3, and it's hands down the most impressive open-source AI model to date! 🤯
+
+As an AI enthusiast who has been closely following the journey of Llama models since their inception last year, I'm thrilled to share with you the story of how these models have evolved and revolutionized the open-source AI landscape. 📜
+
+
+1️⃣ Llama 1 (Feb '23)
+
+Meta took the first bold step by releasing Llama 1, the first open-source model by a major tech company. This move sparked a wave of innovation, as researchers at Stanford created Alpaca, a fine-tune of Llama 1 on GPT-4 generated data and were able to replicate outputs qualitatively similar to ChatGPT. This was a clear indication that open-source LLMs could go toe-to-toe with their closed-source counterparts. 
+
+2️⃣ Llama 2 (July '23)
+
+Just a few months later, Meta released Llama 2 with a commercial license. This model quickly gained popularity and became one of the most downloaded models to date, showcasing the growing interest in open-source AI solutions. 📈
+
+
+3️⃣ Llama 3 (Apr '24) 
+
+After a long 9-month wait, which felt like an eternity in the fast-paced world of Gen AI, Llama 3 has finally arrived, exceeding all expectations! The Llama-3-70b variant is particularly impressive, outperforming significantly more expensive models (15-20x) like Claude-Sonnet and Gemini-1.5 Pro. This is a testament to the power and potential of open-source AI. 
+
+With Llama 3, developers and researchers around the world can now harness the power of state-of-the-art AI without breaking the bank. 💸
+
+Follow me for more exciting updates on AI and the latest developments in the open-source community! 🤖
+
+-----------------------
+
+⏰ Only 1 day left to sign up for my Crash Course on Gen AI! ⏰
+
+Register now: https://lnkd.in/gFZ8rrPA

@@ -1,0 +1,1 @@
+"Convert the below content into a LinkedIn post in my writing style.\n\n{st.session_state.content}\n\n\nHere are my some of my previous LinkedIn posts:\n\n{samples}\n\n\n\n\n"
