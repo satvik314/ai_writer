@@ -1,0 +1,236 @@
+Blog 1: 
+# Testing Top 10 LLMS Models with a Single API
+
+Large Language Models (LLMs) are revolutionizing the way we interact with technology, but choosing the right one for your specific needs can be daunting. With so many LLMs available, each with its own strengths and weaknesses, how do you ensure you're picking the best one for your project?
+Traditionally, testing different LLMs has been a cumbersome process. It involves downloading multiple packages, navigating different APIs, and wrestling with complex integration procedures. This can be a significant hurdle, especially for those new to the world of LLMs.
+But what if there was a way to streamline this entire process? What if you could test multiple LLMs with a single, unified API?
+
+Enter **Portkey**.
+
+Portkey is an open-source AI Gateway that simplifies LLM evaluation. It offers a streamlined solution to manage access to over 250 LLMs through a single API. This not only saves time and reduces complexity but also offers valuable insights into cost, performance, and accuracy metrics. With Portkey, you can easily compare and evaluate a wide range of LLMs, ensuring you choose the best model for your needs.
+
+# How to Get Started with Portkey
+
+Let's start by installing the Portkey AI SDK using pip:
+
+```bash
+pip install portkey-ai
+```
+
+Next, you'll need to obtain your Portkey API Key. You can do this by signing up at https://app.portkey.ai/ and copying the key from your profile.
+
+Once you have your API Key, you can initialize the Portkey client and start running prompts. Here's a simple example using the GPT-3.5-turbo model:
+
+```python
+from portkey.ai import Portkey
+from google.colab import userdata
+
+portkey = Portkey(api_key=userdata.get('PORTKEY_API_KEY'),
+                  virtual_key='gpt-3.5-turbo')
+
+response = portkey.chat.completions.create(
+    messages=[{'role': 'user', 'content': 'Who are you?'}],
+    model='gpt-3.5-turbo',
+    max_tokens=512
+)
+
+response
+```
+
+Notice how the API signature closely mirrors the OpenAI API, making it easy for developers familiar with OpenAI to transition to Portkey.
+
+# Running Multiple LLMs with Portkey
+
+Now, let's see how Portkey simplifies testing multiple LLMs. For this example, we'll use a list of the top 10 LLMs based on the LMSYS Chatbot Arena Leaderboard.
+
+
+First, we store the model names and their providers in a list:
+
+```python
+top_10_models = [
+    ['gpt-4-0613', 'openai'],
+    ['gemini-pro', 'google'],
+    ['gpt-4-turbo-0613', 'openai'],
+    ['claude-2-opus-20240229', 'anthropic'],
+    ['gemini-1.5-flash-latest', 'google'],
+    ['meta-llama/Llama-2-7b-chat-hf', 'together'],
+    ['claude-instant-1.2', 'anthropic'],
+    ['command-r-plus', 'cohere'],
+    ['claude-3-20240207', 'anthropic'],
+    ['Queen/Qwen-5-11B8-Chat', 'together'],
+]
+```
+
+Next, we create a dictionary to store the virtual keys for each provider:
+
+```python
+virtual_keys = {
+    "openai": "gpt-3.5-turbo-0613",
+    "anthropic": "claude-2-100k",
+    "google": "gemini-pro",
+    "cohere": "command-nightly",
+    "together": "together-13b"
+}
+```
+
+We can then define a function to run each model with a given prompt:
+
+```python
+from portkey.ai import Portkey
+from google.colab import userdata
+
+# Using Portkey client to run multiple LLMs in a loop
+def run_top10_llmsys_models(prompt):
+    outputs = []
+    portkey = Portkey(api_key=userdata.get('PORTKEY_API_KEY'))
+    for model, provider in top_10_models:
+        virtual_key = virtual_keys.get(provider)
+        response = portkey.with_options(virtual_key=virtual_key).chat.completions.create(
+            messages=[{'role': 'user', 'content': prompt}],
+            model=model,
+            max_tokens=512
+        )
+        outputs.append([model, response.choices[0].message.content])
+    return outputs
+```
+
+Finally, we can create a function to neatly display the outputs in a table:
+
+```python
+from tabulate import tabulate
+
+def print_model_outputs(prompt):
+    outputs = run_top10_llmsys_models(prompt)
+    table_data = []
+    for model, output in outputs.items():
+        table_data.append([model, output.strip()])
+    headers = ["Model", "Output"]
+    table = tabulate(table_data, headers, tablefmt="grid")
+    print(table)
+```
+
+Let's test these models with a simple question:
+
+```python
+prompt = "If 20 shirts take 5 hours to dry, how much time will 100 shirts take to dry?"
+print_model_outputs(prompt)
+```
+
+This code will run the prompt through all 10 LLMs and present the results in an easy-to-read table. This allows you to quickly compare the responses and see which models perform best on your chosen task.
+
+Portkey makes it incredibly easy to test and compare different LLMs, allowing you to focus on finding the model that best suits your needs. Experiment with various prompts and discover how Portkey can help you unlock the full potential of LLMs!
+
+
+Blog 2:
+# Let AI Agents Create Your IIT-JEE Questions!
+
+Creating high-quality, challenging questions for IIT-JEE aspirants can be a time-consuming task. What if I told you that you could leverage the power of AI to automate this process? With the recent advancements in LLMs like GPT-4, this is now a reality!
+
+In this blog post, we'll explore how to use AI agents from the crewai python library to generate IIT-JEE questions automatically. We'll walk through the code and see how two AI agents, a question creator and a question reviewer, work together to craft well-structured and relevant questions.
+
+# The Challenge of Manual Question Creation
+
+While LLMs like ChatGPT have been great for generating content, directly asking them to create IIT-JEE questions often results in subpar quality. The generated questions might have inaccurate answers, incoherent explanations, or lack the complexity required for the exam. This calls for significant manual intervention and prompt engineering, making the process less efficient.
+
+AI agents offer a solution to this problem by allowing us to define roles and tasks for multiple LLMs, enabling them to collaborate and refine the output. This approach leads to more robust and high-quality question generation.
+
+Let's dive into the code and see how these agents work their magic!
+
+First, ensure you have the necessary libraries installed:
+
+```bash
+!pip install -q crewai
+```
+
+Next, import the required modules and load your OpenAI API key:
+
+```python
+from google.colab import userdata
+import os
+from langchain import ChatOpenAI
+os.environ["OPENAI_API_KEY"] = userdata.get('OPENAI_API_KEY')
+gpt3 = ChatOpenAI(model = 'gpt-3.5-turbo')
+gpt4 = ChatOpenAI(model = 'gpt-4')
+```
+
+Now, let's define our agents. We'll start with the **question creator**:
+
+```python
+from crewai import Agent, Task, Crew, Process
+question_creator = Agent(
+    role = "IIT-JEE Question Creator",
+    goal = "Create challenging and thought-provoking questions for IIT-JEE aspirants.",
+    backstory = """You are an experienced educator specializing in creating high-quality questions for IIT-JEE, a prestigious engineering entrance examination in India.
+    Your goal is to develop questions that test the analytical skills, problem-solving abilities, and conceptual understanding of IIT-JEE aspirants.
+    You have a deep understanding of the IIT-JEE syllabus and the types of questions that appear in the examination.""",
+    verbose = True,
+    allow_delegation = False,
+    llm = gpt4
+)
+```
+
+As you can see, we specify the agent's role, goal, and backstory. We've also provided detailed information about IIT-JEE and the desired question characteristics. This helps the agent understand its task better.
+
+Next, we define the **question reviewer** agent:
+
+```python
+question_reviewer = Agent(
+    role = "IIT-JEE Question Reviewer",
+    goal = "Review and refine IIT-JEE questions to ensure quality and relevance.",
+    backstory = """You are an expert reviewer of IIT-JEE questions with a keen eye for detail and a deep understanding of the examination format.
+    Your role is to review questions created by the Question Creator and provide constructive feedback to improve their quality and relevance.
+    You ensure that the questions are well-structured, unambiguous, and align with the IIT-JEE syllabus and difficulty level.""",
+    verbose = True,
+    allow_delegation = True,
+    llm = gpt4
+)
+```
+
+The reviewer agent is tasked with evaluating the quality, relevance, and clarity of the questions generated by the question creator. It's important to note that this agent has allow_delegation set to True, allowing it to delegate tasks to other agents if needed.
+
+Now, let's create tasks for our agents:
+
+```python
+# Create tasks for your agents
+task1 = Task(
+    description = """Create a challenging and thought-provoking question for IIT-JEE aspirants on a specific topic from the IIT-JEE syllabus.
+                   The question should test the analytical skills, problem-solving abilities, and conceptual understanding of the students.
+                   Provide the question statement, the correct answer with a detailed explanation.""",
+    expected_output = "A well-crafted IIT-JEE question with the correct answer and explanation.",
+    agent=question_creator
+)
+
+task2 = Task(
+    description = """Review the IIT-JEE question created by the Question Creator.
+                   Assess the question's quality, relevance to the IIT-JEE syllabus, difficulty level, and clarity.
+                   Provide constructive feedback and suggestions for improvement, if necessary.
+                   Ensure that the question is well-structured, unambiguous, and aligns with the IIT-JEE examination format.""",
+    expected_output = "A comprehensive review of the IIT-JEE question with feedback and suggestions for improvement.",
+    agent=question_reviewer
+)
+```
+
+We've defined two tasks: one for creating the question and another for reviewing it. Each task has a clear description and expected output.
+
+Finally, let's instantiate our Crew and initiate the process:
+
+```python
+# Instantiate your crew with a sequential process
+crew = Crew(
+    agents=[question_creator, question_reviewer],
+    tasks=[task1, task2],
+    verbose=1
+)
+
+# Get your crew to work!
+result = crew.kickoff()
+print(result)
+```
+
+By running this code, you'll witness the AI agents interacting with each other, generating questions, and providing feedback. The output will include a comprehensive review and a final, refined IIT-JEE question.
+
+This approach demonstrates the power of collaboration between AI agents. By working together, these agents can create high-quality, well-structured IIT-JEE questions with minimal human intervention.
+
+Experiment with different prompts, topics, and LLM models to further enhance the question generation process. The possibilities are endless!
+
+Blog 3:

@@ -5,7 +5,7 @@ import os
 from youtube_transcript_api import YouTubeTranscriptApi
 
 # Set your API key as an environment variable
-os.environ['OPENROUTER_API_KEY'] = st.secrets('OPENROUTER_API_KEY')
+os.environ['OPENROUTER_API_KEY'] = st.secrets['OPENROUTER_API_KEY']
 
 # Load samples from the text files
 def load_samples(file_name):

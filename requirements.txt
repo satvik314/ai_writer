@@ -1,0 +1,4 @@
+streamlit
+openai
+portkey-ai
+youtube-transcript-api
