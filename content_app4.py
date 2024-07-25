@@ -5,12 +5,13 @@ from portkey_ai import Portkey
 from model_config import get_model_config
 
 # Set API key from Streamlit secrets
+
 portkey_api_key = st.secrets['PORTKEY_API_KEY']
 portkey = Portkey(api_key=portkey_api_key)
 
 # Load sample posts
-def load_samples(file_name):
-    with open(file_name, 'r') as file:
+def load_samples(filename):
+    with open(filename, 'r', encoding='utf-8') as file: ## added utf 8 for emoji
         return file.read()
 
 twitter_samples = load_samples('twitter_posts.txt')
@@ -34,10 +35,10 @@ def generate_content(content, samples, platform):
     prompt += "post in my writing style." if platform != "Blog" else "article in my writing style. Include a title, introduction, main body with subheadings, and conclusion."
     
     messages = [
-        {"role": "user", "content": f"{prompt}\n\n{content}\n\n\nHere are some of my previous {platform} posts/articles:\n\n{samples}\n\n\n\n\n"}
+        {"role": "user", "content": f"{prompt}\n\nUse this content and information to create the posts:\n{content}\n\n\n.Here are some of my previous {platform} posts/articles:\n\n{samples}\n\n\n\n\n"}
     ]
     print(content)
-    config = get_model_config("sonnet") 
+    config = get_model_config("gpt_4o_mini") 
     if config:
         response = portkey.with_options(config=config).chat.completions.create(
             messages=messages,
@@ -54,12 +55,14 @@ def get_perplexity_sonar_response(recent_topic):
         return ''
 
     messages = [
-        {"role": "user", "content": f"Give the latest news on '{recent_topic}'"}
+        {"role": "user", "content": f" Information on '{recent_topic}'"}
     ]
 
     config = get_model_config("sonar")  
     if config:
         response = portkey.with_options(config=config).chat.completions.create(
+            temperature= 1.0,
+            top_p= 1.0,
             messages=messages,
             max_tokens=1024,
         )
@@ -72,7 +75,7 @@ def get_youtube_transcript(youtube_url):
     video_id = youtube_url.split("v=")[1]
     transcript = YouTubeTranscriptApi.get_transcript(video_id)
     return " ".join([entry['text'] for entry in transcript])
-
+    
 def setup_sidebar():
     st.sidebar.markdown("<h1 style='text-align: center;'>🎛️ Input</h1>", unsafe_allow_html=True)
     st.sidebar.markdown("<h2>📥 Input Type</h2>", unsafe_allow_html=True)
