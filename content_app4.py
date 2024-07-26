@@ -26,7 +26,7 @@ def get_samples(platform):
     else:
         return blog_samples
 
-def generate_content(content, samples, platform):
+def generate_content(content, samples, platform, llm = "sonnet"):
     if not content:
         st.warning('⚠️ Please enter content.')
         return ''
@@ -38,9 +38,11 @@ def generate_content(content, samples, platform):
         {"role": "user", "content": f"{prompt}\n\nUse this content and information to create the posts:\n{content}\n\n\n.Here are some of my previous {platform} posts/articles:\n\n{samples}\n\n\n\n\n"}
     ]
     print(content)
-    config = get_model_config("gpt_4o_mini") 
+    config = get_model_config(llm)
+    model_snug = get_model_snug(llm)
     if config:
         response = portkey.with_options(config=config).chat.completions.create(
+            model = model_snug,
             messages=messages,
             max_tokens=1024,
         )
