@@ -29,3 +29,6 @@ MODEL_CONFIGS = {
 
 def get_model_config(model_name):
     return MODEL_CONFIGS.get(model_name)
+
+def get_model_snug(model_name):
+    return MODEL_CONFIGS.get(model_name)['model']
