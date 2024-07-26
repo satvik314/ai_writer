@@ -61,10 +61,12 @@ def get_perplexity_sonar_response(recent_topic):
     ]
 
     config = get_model_config("sonar")  
+    model_snug = get_model_snug("sonar")
     if config:
         response = portkey.with_options(config=config).chat.completions.create(
             temperature= 1.0,
             top_p= 1.0,
+            model = model_snug,
             messages=messages,
             max_tokens=1024,
         )
