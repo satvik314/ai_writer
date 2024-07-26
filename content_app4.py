@@ -2,7 +2,7 @@ import streamlit as st
 import os
 from youtube_transcript_api import YouTubeTranscriptApi
 from portkey_ai import Portkey
-from model_config import get_model_config
+from model_config import get_model_config, get_model_snug
 
 # Set API key from Streamlit secrets
 
