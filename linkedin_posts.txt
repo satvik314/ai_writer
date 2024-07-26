@@ -319,3 +319,85 @@ Follow me for more exciting updates on AI and the latest developments in the ope
 ⏰ Only 1 day left to sign up for my Crash Course on Gen AI! ⏰
 
 Register now: https://lnkd.in/gFZ8rrPA
+
+
+### Post 13
+
+🚀 OpenAI just dropped a bombshell, and it's NOT GPT-5!
+
+Meet GPT-4o-mini: The game-changer that's about to revolutionize the AI landscape! Here's why this is HUGE:
+
+📊 Performance:
+
+〰 Crushes GPT-3.5 Turbo with an 82% score on MMLU (vs 69.8%)
+
+〰 Dominates LLMs of similar size like Claude Haiku and Gemini Flash by a huge margin
+
+〰 Lightning-fast responses - it is optimized for speed, providing rapid answers and insights
+
+💰 Cost-Efficiency:
+
+〰 Just 60 cents per million output tokens
+
+〰 25x cheaper than GPT-4o
+
+〰 60% savings compared to GPT-3.5 Turbo
+
+🧠 Capabilities:
+
+〰 Text and vision support now, with audio and video on the horizon
+
+〰 Massive 128K token context window (entire books, anyone?)
+
+〰 Up-to-date knowledge (Oct 2023 cutoff)
+
+〰 Improved understanding across a wide range of non-English languages
+
+GPT-4o-mini is about to become the most popular and widely used LLM globally. Its combination of performance, affordability, and versatility is unmatched.
+
+Ready to dive in? Watch my YouTube video and grab my Colab notebook in the comments!
+
+=====
+
+At Build Fast with AI, we have crafted a Crash Course on Generative AI with a main focus on a learning-by-doing approach. Every lecture is centered around building AI apps from end-to-end. 
+
+The next cohort starts soon!
+
+Join waitlist now: https://lnkd.in/grNgi6n3
+
+-------------------------------------
+
+### Post 14
+
+🔥 New LLM model wins Maths Olympiad! But can it solve IIT JEE questions? 🤔 
+
+Recently, results for AIMO were announced, and a 7B parameter model won the first prize by 🚀 solving 29 out of 50 questions!
+
+The model is called NuminaMath-7B-TIR and was developed by Numina in collaboration with Huggingface.
+
+🧠 How Does It Work?
+
+This model employs a very innovative approach to solving problems since LLMs are inherently weak in math. 
+
+-> Breaks down complex problems into manageable steps
+
+ -> Converts each step into executable Python code 
+
+-> Runs calculations in Python instead of within the LLM
+
+🇮🇳 But Can It Crack IIT JEE?
+
+I was so intrigued by the model that I wanted to test if it could solve JEE Advanced questions. I tried the model on 5 questions - see the video for results! (P.S. it scored well!) 
+
+Honestly, I didn't expect an AI capable of tackling JEE-level questions to emerge for at least another year. This development is truly surprising and impressive.
+
+=====
+
+At Build Fast with AI, we have crafted a Crash Course on Generative AI with a main focus on a learning-by-doing approach. Every lecture is centered around building AI apps from end-to-end.
+
+The next cohort starts soon!
+
+Join the waitlist now: https://lnkd.in/grNgi6n3
+
+
+---------------------------------------
