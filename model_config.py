@@ -21,7 +21,7 @@ MODEL_CONFIGS = {
     },
     "sonar": {
         "config_name": "sonar",
-        "model": "perplexity/llama-3-sonar-large-32k-online",
+        "model": "perplexity/llama-3.1-sonar-large-128k-online",
         "provider": "openrouter",
         "api_key": st.secrets['OPENROUTER_API_KEY']
     }
