@@ -9,7 +9,7 @@ MODEL_CONFIGS = {
     },
     "gemini": {
         "config_name": "gemini",
-        "model": "gemini-1.5-pro",
+        "model": "gemini-1.5-pro-002",
         "provider": "google",
         "api_key": st.secrets['GOOGLE_API_KEY']
     },
